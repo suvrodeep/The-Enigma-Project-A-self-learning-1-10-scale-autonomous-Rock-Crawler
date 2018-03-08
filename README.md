@@ -1,2 +1,2 @@
 # The-Enigma-Project-A-self-learning-1-10-scale-autonomous-Rock-Crawler
-This is an endeavor to hack a 1:10 scale RC rock crawler and convert it into an autonomous vehicle which will be able to navigate rough terrain powered by machine learning models trained on real time driving 
+This is an endeavor to hack a 1:10 scale RC rock crawler and convert it into an autonomous vehicle which will be able to navigate rough terrain powered by machine learning models trained on real time driving. We use an Arduino to collect data from ultrasonic distance sensors and a 3-axis axelerometer, steering and throttle positions for situational awareness. A Raspberry Pi 3 is used to process the data and build the model to predict steering and throttle response based on sensor data.
