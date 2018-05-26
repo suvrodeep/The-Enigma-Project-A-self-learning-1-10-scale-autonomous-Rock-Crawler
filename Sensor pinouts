@@ -1,0 +1,10 @@
+Sensor 4 (Top Left) - Arduino 8 - OK
+Sensor 3 (Top Right) - Arduino 9 - OK
+Sensor 8 (Bottom Center) - Arduino 10 - OK
+Sensor 2 (Side Right) - Arduino 11 - OK
+Sensor 5 (Side Left) - Arduino 12
+Sensor 7 (Top Center)  - Arduino 7 - OK
+
+Steering  - Arduino 5
+Throttle - Arduino 6
+
