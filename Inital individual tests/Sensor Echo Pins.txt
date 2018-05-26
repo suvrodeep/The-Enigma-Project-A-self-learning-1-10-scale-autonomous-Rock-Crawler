@@ -1,0 +1,6 @@
+Pin 11 - Sensor 2 - OK
+Pin 9 - Sensor 5 - OK
+Pin 7 - Sensor 3 - OK
+Pin 6 - Sensor 7 - OK
+Pin 4 - Sensor 4 - OK
+Pin 12 - Sensor 8 - FUBAR
