@@ -24,8 +24,8 @@ int* get_distance() {             // Define get_distance function. Pings sensors
 }
 
 void setup() {                    // Code to run once during initial setup goes here 
-  pinMode(6, INPUT); // Throttle pin
   pinMode(5, INPUT); // Steering pin
+  pinMode(6, INPUT); // Throttle pin
   pinMode(4, OUTPUT); // Pin to control relay
   digitalWrite(4, LOW);
   
@@ -42,12 +42,14 @@ void loop() {                   // Code to run over and over in a loop goes here
       Serial.print("Sensor ");
       Serial.print(index + 1);
       Serial.print(": ");
-      Serial.println(check_distance[index]);
+      Serial.print(check_distance[index]);
+      Serial.print("\n");
     }
-    Serial.print("Steering:"); // Print the value of 
-    Serial.println(steering);        // each channel
+    Serial.print("Steering:"); // Print the value of steering
+    Serial.print(steering);
+    Serial.print("\n");
     Serial.print("Throttle:");
-    Serial.println(throttle);
+    Serial.print(throttle);
     Serial.println();
     delay(500);
 }

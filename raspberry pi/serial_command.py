@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import serial
-import time
+
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 reject_count = 1
@@ -13,12 +13,16 @@ try:
         ser.readline()
         reject_count = reject_count + 1
     while 1:
+        ser.flushInput()
         inp = ser.readline()
-        print(inp.decode("utf8"))
-
-        ser.write(steering)
-        time.sleep(0.01)
-        ser.write(throttle)
+        inp = inp.decode("utf8")
+        if inp == -1:
+            ser.flush()
+            command = 1000 + steering
+            ser.write(command)
+        else:
+            print(inp)
+        ser.flushOutput()
 except KeyboardInterrupt:
     ser.close()
     print("\n\nPressed Ctrl+C. Exiting program\n\n")

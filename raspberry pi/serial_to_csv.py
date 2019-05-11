@@ -12,6 +12,8 @@ try:
         while reject_count <= 10:
             ser.readline()
             reject_count = reject_count + 1
+        outfile.write("Top_Left,Top_Center,Top_Right,Side_Right,Bottom_Center,Side_Left,Steering,Throttle")
+        outfile.write("\n")
         while 1:
             inp = ser.readline()
             print(inp.decode("utf8"))

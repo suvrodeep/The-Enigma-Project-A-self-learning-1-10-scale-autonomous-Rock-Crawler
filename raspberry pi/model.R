@@ -9,6 +9,13 @@ write_csv(df, "data_cleaned.csv")
 ggplot(data = df, aes(Throttle)) + geom_histogram(bins = 100)
 ggplot(data = df, aes(Steering)) + geom_histogram(bins = 100)
 
+ggplot(data = df, aes(x = Top_Left, y = Steering)) + geom_point()
+ggplot(data = df, aes(x = Top_Center, y = Steering)) + geom_point()
+ggplot(data = df, aes(x = Top_Right, y = Steering)) + geom_point()
+ggplot(data = df, aes(x = Side_Right, y = Steering)) + geom_point()
+ggplot(data = df, aes(x = Bottom_Center, y = Steering)) + geom_point()
+ggplot(data = df, aes(x = Side_Left, y = Steering)) + geom_point()
+
 test.index <- createDataPartition(df$Steering, p=0.2, list = FALSE)
 df.test <- df[test.index,]
 df.train <- df[-test.index,]
