@@ -155,7 +155,7 @@ void loop() {                   // Code to run over and over in a loop goes here
       steering.write(steering_straight);
       throttle_pos = smooth_accel(115);  // Increase speed if there is no obstacle within 200 cm
     }
-    else if (check_distance[1] > minimumRange && check_distance < maximumRange) {
+    else if (check_distance[1] > minimumRange && check_distance[1] < maximumRange) {
       steering.write(steering_straight);
       throttle_pos = smooth_accel(108);  // Maintain moderate speed if obstacle is within 200 cm
     }
@@ -183,7 +183,3 @@ void loop() {                   // Code to run over and over in a loop goes here
     setup();
   }
 }
-
-
-
-
